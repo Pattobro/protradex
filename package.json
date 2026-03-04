@@ -1,0 +1,16 @@
+{
+  "name": "protradex-web",
+  "version": "1.0.0",
+  "description": "Production-ready ProTrade X website and simulator shell",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "dev": "NODE_ENV=development node src/server.js",
+    "start": "NODE_ENV=production node src/server.js",
+    "test": "NODE_ENV=test node --test",
+    "lint": "node --check src/server.js && node --check public/app.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
