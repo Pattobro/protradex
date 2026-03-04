@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="ProTrade X is an institutional trading simulator with charting, quant signals, option analytics, and panelized workflows."
+    />
+    <title>ProTrade X | Institutional Trading Platform Simulator</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <h1>ProTrade X</h1>
+        <p>Institutional Trading Platform Simulator</p>
+      </div>
+      <button id="themeToggle" class="btn" aria-label="Toggle theme">Toggle Theme</button>
+    </header>
+
+    <main class="layout">
+      <section class="panel chart-panel">
+        <div class="panel-title-row">
+          <h2>Live Candlestick Chart</h2>
+          <span class="badge">Simulated Feed</span>
+        </div>
+        <canvas id="chart" width="960" height="360" aria-label="Candlestick chart"></canvas>
+      </section>
+
+      <section class="panel">
+        <h2>SMA + RSI Indicators</h2>
+        <div id="indicatorGrid" class="stats-grid"></div>
+      </section>
+
+      <section class="panel">
+        <h2>Stock Hacker</h2>
+        <ul id="stockSignals" class="signal-list"></ul>
+      </section>
+
+      <section class="panel">
+        <h2>Option Hacker</h2>
+        <ul id="optionSignals" class="signal-list"></ul>
+      </section>
+
+      <section class="panel full-width">
+        <h2>Black-Scholes Greeks Engine</h2>
+        <div id="greekGrid" class="stats-grid"></div>
+      </section>
+    </main>
+
+    <footer class="footer">v1.3.0 • built for production deployment</footer>
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>
