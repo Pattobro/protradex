@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ProTrade X | Institutional Trading Platform Simulator</title>
+    <meta
+      name="description"
+      content="Explore ProTrade X: an institutional trading platform simulator with candlestick charting, indicators, option analytics, and multi-panel workflows."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <h1>ProTrade X</h1>
+        <p>Institutional Trading Platform Simulator</p>
+      </div>
+      <a class="cta" href="#demo">Launch Demo</a>
+    </header>
+
+    <main>
+      <section class="hero" id="demo">
+        <article class="hero-copy">
+          <h2>Simulate institutional-grade market workflows in your browser.</h2>
+          <p>
+            ProTrade X delivers a realistic trading workstation with real-time chart simulation, technical indicators,
+            stock/option scanners, and Black-Scholes Greeks for strategy analysis.
+          </p>
+          <ul>
+            <li>Live candlestick simulation</li>
+            <li>SMA + RSI overlays</li>
+            <li>Stock & option idea scanner</li>
+            <li>Black-Scholes pricing and Greeks</li>
+          </ul>
+        </article>
+
+        <article class="hero-panel">
+          <div class="ticker-row">
+            <strong id="symbol">AAPL</strong>
+            <span id="last-price">$190.00</span>
+            <span id="price-change" class="up">+0.00%</span>
+          </div>
+          <canvas id="chart" width="760" height="320" aria-label="candlestick chart"></canvas>
+        </article>
+      </section>
+
+      <section class="grid-panels">
+        <article class="panel">
+          <h3>Stock Hacker</h3>
+          <table>
+            <thead><tr><th>Symbol</th><th>Momentum</th><th>Volume</th></tr></thead>
+            <tbody id="stock-hacker"></tbody>
+          </table>
+        </article>
+
+        <article class="panel">
+          <h3>Option Hacker</h3>
+          <table>
+            <thead><tr><th>Contract</th><th>IV</th><th>Open Int</th></tr></thead>
+            <tbody id="option-hacker"></tbody>
+          </table>
+        </article>
+
+        <article class="panel">
+          <h3>Black-Scholes Greeks Engine</h3>
+          <div id="greeks" class="greeks"></div>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <small>© <span id="year"></span> ProTrade X v1.3.1</small>
+    </footer>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>
